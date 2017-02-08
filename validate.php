@@ -15,7 +15,7 @@
 
 // If the user exist, valid too the password loged and the user status
 if($nmyusuario != 0){
-  $sql = "select idusuario from usuarios where estado = 1 and usuario = '".htmlentities($_POST["usuario"])."' and clave = '".md5(htmlentities($_POST["clave"]))."'";
+  $sql = "select usuario from usuarios where estado = 1 and usuario = '".htmlentities($_POST["usuario"])."' and clave = '".md5(htmlentities($_POST["clave"]))."'";
   $myclave = mysql_query($sql,$link);
   $nmyclave = mysql_num_rows($myclave);
 
